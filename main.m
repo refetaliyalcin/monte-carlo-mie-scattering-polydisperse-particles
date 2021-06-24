@@ -27,17 +27,10 @@ weight_vector = lognpdf(r_vector_nm,3.8,0.5); %the distribution
 r_vector=r_vector_nm*10^-9;
 weight_vector=weight_vector/trapz(r_vector,weight_vector); 
 
-% r_vector=49:1:51; %size range to be considered
-% weight_vector = [0,1,0]; %the distribution
-% r_vector=(49:1:51)*10^-9;
-% weight_vector=weight_vector/trapz(r_vector,weight_vector); 
-
-% figure %show the size distribution
-% plot(10^9*r_vector,weight_vector,'LineWidth',2)
-% ylabel('Frequency')
-% xlabel('Radius [nm]')
-
-
+figure %show the size distribution
+plot(10^9*r_vector,weight_vector,'LineWidth',2)
+ylabel('Frequency')
+xlabel('Radius [nm]')
 
 n_pigment=sio2_n(lamda);  %real refractive index of pigment
 k_pigment=sio2_k(lamda);  %imaginary refractive index of pigment
